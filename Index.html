@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExpenseFlow Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>ExpenseFlow</h2>
+    <button data-page="dashboard">Dashboard</button>
+    <button data-page="expenses">Expenses</button>
+    <button data-page="analytics">Analytics</button>
+    <button data-page="settings">Settings</button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <section id="dashboard" class="page active">
+      <h1>Total Balance</h1>
+      <h2 id="totalBalance">$0</h2>
+    </section>
+
+    <section id="expenses" class="page">
+      <h1>Add Expense</h1>
+      <input id="desc" placeholder="Description">
+      <input id="amount" type="number" placeholder="Amount">
+      <select id="category">
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Shopping</option>
+        <option>Other</option>
+      </select>
+      <button id="addExpenseBtn">Add</button>
+
+      <h2>List</h2>
+      <div id="expenseList"></div>
+    </section>
+
+    <section id="analytics" class="page">
+      <h1>Analytics</h1>
+      <canvas id="chart"></canvas>
+    </section>
+
+    <section id="settings" class="page">
+      <h1>Settings</h1>
+      <button id="toggleTheme">Toggle Dark Mode</button>
+    </section>
+
+  </main>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
